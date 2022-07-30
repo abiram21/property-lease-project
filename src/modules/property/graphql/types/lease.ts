@@ -3,28 +3,26 @@ import { GraphQLFloat } from "graphql";
 const { GraphQLObjectType, GraphQLString, GraphQLNonNull } = require("graphql");
 
 const GraphQLLease = new GraphQLObjectType({
-  name: "Property",
+  name: "Lease ds",
   fields: {
     id: {
       type: new GraphQLNonNull(GraphQLString),
-      description: "Property id",
+      description: "type id",
     },
-    address: {
+    startDate: {
+      type: new GraphQLNonNull(GraphQLString),
+      description: "type name",
+    },
+    endDate: {
         type: new GraphQLNonNull(GraphQLString),
         description: "type code",
     },
-    owner: {
+    frequency: {
         type: new GraphQLNonNull(GraphQLString),
         description: "Address of the student",
     },
-    leases: {
+    amount: {
         type: new GraphQLNonNull(GraphQLFloat)
-    },
-    status: {
-      type: new GraphQLNonNull(GraphQLFloat)
-    },
-    description: {
-      type: new GraphQLNonNull(GraphQLFloat)
     }
   },
 });
