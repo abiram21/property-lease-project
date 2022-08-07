@@ -6,7 +6,6 @@ const url = dbConfig.mongo.url;
 let db: Db;
 
 const client = new MongoClient(dbConfig.mongo.url);
-
 const connect = async () => {
     const con = await client.connect();
     db = con.db(dbName);
